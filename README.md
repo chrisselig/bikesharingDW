@@ -15,8 +15,18 @@ Using the Azure tech stack, I wanted to create the following architecture:
 
 In Azure, I needed to create a Postgres database and loaded the original data into it.
 
-I performed some [exploratory data analysis (eda)]() using python to get a look at the original datasets. 
+Then, I performed some [exploratory data analysis (eda)](https://github.com/chrisselig/bikesharingDW/tree/main/02_eda) using python to get a look at the original datasets. 
 
-I then created a Synapse workspace and created a datawarehouse. I then created a pipeline to copy the data from the Postgres database to the datawarehouse, but along the way I transformed it into a star schema. The data models are shown below.
+Next, the PostgreSQL database was linked to Azure blob storage and the data was loaded as external tables to SQL database in Azure Synapse Analytics.
 
-***** Insert image here *****
+During the transfer to Synapse, the data was transformed from a relational datamodel, to a star schema.
+
+The original model:
+
+![Original Relational Model]()
+
+The newly created star schema:
+
+![Star Schema]()
+
+
